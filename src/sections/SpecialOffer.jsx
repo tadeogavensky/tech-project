@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const SpecialOffer = () => {
   return (
     <section className="my-36">
-      <div className="flex flex-col-reverse lg:flex-row">
+      <div className="flex flex-col-reverse lg:flex-row gap-14">
         <motion.div
          initial={{ translateX: -50 }}
          animate={{ translateX: 100 }}
