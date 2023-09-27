@@ -3,7 +3,7 @@ import gray from "../assets/iphone-15-pro-gray.avif";
 import purple from "../assets/iphone-15-purple.png";
 import pink from "../assets/iphone-15-pink.avif";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
-
+import {  motion } from "framer-motion";
 const iphones = [gray, purple, pink];
 
 const Hero = () => {
@@ -12,6 +12,7 @@ const Hero = () => {
   const handleImageClick = (image) => {
     setSelectedImage(image);
   };
+
   return (
     <section className="relative w-full pt-24 xl:pt-0 " id="home">
       <div className="flex flex-col lg:flex-row items-center min-h-screen gap-10 max-w-7xl mx-auto">
@@ -20,12 +21,26 @@ const Hero = () => {
             Our Autumn collection 🍂
           </p>
           <h1 className="lg:text-8xl text-6xl font-palanquin font-bold lg:leading-relaxed mb-8">
-            <span className="xl:whitespace-normal relative z-10 pr-10">
+            <motion.span
+              initial={{ height: -10 }}
+              animate={{ height: 40 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="xl:whitespace-normal relative  "
+            >
               {" "}
               The New Arrival
-            </span>{" "}
+            </motion.span>{" "}
             <br />
-            <span className="text-pink-400"> Apple </span>Phones
+            <motion.span
+              initial={{ height: 0 }}
+              animate={{ height: "auto" }}
+              transition={{ duration: 0.5 }}
+              className="text-pink-400"
+            >
+              {" "}
+              Apple{" "}
+            </motion.span>
+            Phones
           </h1>
 
           <p className="font-montserrat font-normal">
@@ -60,7 +75,7 @@ const Hero = () => {
             alt=""
             width={610}
             height={502}
-            className="object-contain relative z-10 max-w-lg max-h-[400px]"
+            className="object-contain  max-w-lg max-h-[400px]"
           />
 
           <div className="flex flex-row gap-10 sm:absolute md:-bottom-20 lg:-bottom-10 mt-10">

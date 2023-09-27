@@ -1,9 +1,22 @@
 import offer from "../assets/offer.png";
+import { motion } from "framer-motion";
+
 const SpecialOffer = () => {
   return (
     <section className="my-36">
       <div className="flex flex-col-reverse lg:flex-row">
-        <img src={offer} alt="offer" />
+        <motion.div
+         initial={{ translateX: -50 }}
+         animate={{ translateX: 100 }}
+         transition={{
+           repeat: Infinity,
+           repeatType: "reverse", // This makes the animation reverse after each repeat
+           duration: 2, // Adjust the duration as needed
+           ease: "linear", // Use linear easing for a constant speed
+         }}
+        >
+          <img src={offer} alt="offer" />
+        </motion.div>
 
         <div className="flex flex-col ">
           <h1 className="text-6xl font-bold font-palanquin">

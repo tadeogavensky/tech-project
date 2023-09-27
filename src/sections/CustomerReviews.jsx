@@ -21,7 +21,7 @@ const CustomerReviews = () => {
   return (
     <section className="py-20">
       <div className="flex flex-col justify-center items-center ">
-        <h1 className="font-palanquin font-bold text-5xl">
+        <h1 className="font-palanquin font-bold text-4xl lg:text-5xl">
           What Our <span className="text-pink-400 ">Clients</span> Say?
         </h1>
         <p className="font-montserrat text-center mt-4 max-w-lg text-gray-500">

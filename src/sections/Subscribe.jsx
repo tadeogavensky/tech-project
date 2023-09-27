@@ -4,7 +4,7 @@ const Subscribe = () => {
   return (
     <section id="subscribe">
       <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
-        <h1 className="text-5xl font-bold font-palanquin max-w-sm leading-normal">
+        <h1 className="lg:text-5xl text-6xl font-bold font-palanquin max-w-sm leading-normal">
           Sign Up for <span className="text-pink-500">Updates</span> &
           Newsletter
         </h1>

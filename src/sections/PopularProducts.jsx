@@ -4,7 +4,7 @@ import iphone15progray from "../assets/iphone-15-pro-gray.avif";
 import macbookair from "../assets/macbookair.png";
 import ipadpro from "../assets/ipadpro.png";
 import airpodspro from "../assets/airpodspro.png";
-
+import { motion } from "framer-motion";
 const PopularProducts = () => {
   const appleProducts = [
     {
@@ -34,6 +34,7 @@ const PopularProducts = () => {
     },
   ];
 
+  
   return (
     <section className="mt-36" id="products">
       <div className="flex flex-col justify-center  lg:justify-start items-start mb-12">
@@ -47,20 +48,20 @@ const PopularProducts = () => {
         </p>
       </div>
 
-      <div className="grid lg:grid-cols-4 grid-cols-1 md:grid-cols-2 gap-16 justify-items-center">
+      <div
+        className="grid lg:grid-cols-4 grid-cols-1 md:grid-cols-2 gap-16 justify-items-center"
+      >
         {appleProducts.map((product, index) => {
           return (
-            <div key={index}>
-              <div className="flex flex-col flex-1  gap-2">
+            <motion.div initial={{opacity:0,translateX:-50,translateY:-50}}  transition={{duration:0.3, delay: index * 0.4}} whileInView={{opacity:1,translateX:0,translateY:0,}} viewport={{once:true}} key={index}>
+              <div className="flex flex-col flex-1 gap-2">
                 <div className="bg-card flex justify-center items-center bg-center bg-cover rounded-xl w-[280px] h-[280px]">
                   <img
                     src={product.img}
                     alt="image"
-                    className="object-contain w-full  "
-                  
+                    className="object-contain w-full"
                   />
                 </div>
-
                 <div className="flex items-center mt-8 gap-2.5">
                   <AiFillStar size={25} className="text-pink-500" />
                   <p className="text-xl font-montserrat">({product.rating})</p>
@@ -72,7 +73,7 @@ const PopularProducts = () => {
                   ${product.price}
                 </p>
               </div>
-            </div>
+            </motion.div>
           );
         })}
       </div>

@@ -29,7 +29,7 @@ const SuperQuality = () => {
         <img
           src={macbookair}
           alt="macbookair"
-          width="570" height="522" class="object-contain"
+          width="570" height="522" className="object-contain"
         
         />
       </div>
