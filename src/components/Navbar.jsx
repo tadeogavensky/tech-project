@@ -75,7 +75,7 @@ const Navbar = () => {
           initial="initial"
           animate="animate"
           exit="exit"
-          className="fixed left-0 top-0 bg-fuchsia-400 origin-top h-screen w-screen px-10 py-8 "
+          className="fixed left-0 top-0 bg-fuchsia-400 origin-top h-screen w-full px-10 py-8 "
           style={{ zIndex: 99 }}
         >
           <div className="flex items-center justify-between">
