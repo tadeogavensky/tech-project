@@ -5,12 +5,13 @@ export default {
     fontFamily: {
       poppins: ["Poppins"],
       montserrat: ["Montserrat"],
-      palanquin: ["Palanquin"]
+      palanquin: ["Palanquin"],
     },
-    backgroundImage:{
-      hero:"url('/src/assets/hero.jpg')"
+    backgroundImage: {
+      hero: "url('/src/assets/hero.svg')",
+      card: "url('/src/assets/thumbnail-background.svg')",
     },
-   
+
     extend: {},
   },
   plugins: [],

@@ -1,26 +1,42 @@
-import Hero from "./components/Hero";
+import Hero from "./sections/Hero";
 import Navbar from "./components/Navbar";
-import PopularProducts from "./components/PopularProducts";
-import Services from "./components/Services";
-import SuperQuality from "./components/SuperQuality";
-import SpecialOffer from "./components/SpecialOffer";
-import CustomerReviews from "./components/CustomerReviews";
-import Subscribe from "./components/Subscribe";
+import PopularProducts from "./sections/PopularProducts";
+import Services from "./sections/Services";
+import SuperQuality from "./sections/SuperQuality";
+import SpecialOffer from "./sections/SpecialOffer";
+import CustomerReviews from "./sections/CustomerReviews";
+import Subscribe from "./sections/Subscribe";
+import Footer from "./sections/Footer";
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-white relative">
+    <main className="relative">
       <Navbar />
-      <div className="sm:pl-16 pl-8 mt-20 min-h-screen">
+      <section className="px-14">
         <Hero />
-      </div>
-      <PopularProducts />
-      <SuperQuality />
-      <Services />
-      <SpecialOffer />
-      <CustomerReviews />
-      <Subscribe />
-    </div>
+      </section>
+      <section className="px-14">
+        <PopularProducts />
+      </section>
+      <section className="px-14">
+        <SuperQuality />
+      </section>
+      <section className="px-14">
+        <Services />
+      </section>
+      <section className="px-14">
+        <SpecialOffer />
+      </section>
+      <section className="bg-fuchsia-50 px:32">
+        <CustomerReviews />
+      </section>
+      <section className="py-32 p-8 sm:p-16">
+        <Subscribe />
+      </section>
+      <section className=" bg-black px-14 pb-8">
+        <Footer />
+      </section>
+    </main>
   );
 };
 
