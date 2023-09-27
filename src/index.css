@@ -16,3 +16,7 @@ body {
 .disable-scroll {
   overflow: hidden;
 }
+
+body{
+  overflow-x: hidden;
+}
