@@ -75,7 +75,7 @@ const Hero = () => {
             alt=""
             width={610}
             height={502}
-            className="object-contain  max-w-lg max-h-[400px]"
+            className="object-contain  max-w-lg max-h-[200px] lg:max-h-[400px]"
           />
 
           <div className="flex flex-row gap-10 sm:absolute md:-bottom-20 lg:-bottom-10 mt-10">
